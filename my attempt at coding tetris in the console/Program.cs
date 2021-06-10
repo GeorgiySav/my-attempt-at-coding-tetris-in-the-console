@@ -13,8 +13,8 @@ namespace my_attempt_at_coding_tetris_in_the_console
     class Program
     {
 
-        static int width = 10;
-        static int height = 20;
+        const int height = 20;
+        const int width = 10;
 
         static int[,] grid = 
         {
@@ -327,14 +327,9 @@ namespace my_attempt_at_coding_tetris_in_the_console
 
         static bool gameOver = false;
 
-        static int score = 0;
-        static int level = 0;
-        static readonly int[] ScoreGivenForNumberOfLinesCleared = { 100, 300, 500, 800 };
-        static readonly int[] ScoreGivenForCertainActions = {100, 200, 300, 400, 500, 600, 800, 1200, 1600, 1800, 2400, 0, 1, 2 };
-
         static Stopwatch DropTimer = new Stopwatch();
         static Stopwatch ConfirmTimer = new Stopwatch();
-        static void Main(string[] args)
+        static void Main()
         {
 
             Console.OutputEncoding = System.Text.Encoding.UTF8;
